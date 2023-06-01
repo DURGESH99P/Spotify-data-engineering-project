@@ -90,12 +90,12 @@
 
 <h2> ⏸️ Run following commands in sequence to download the requirements</h2>
     <ul>
-        <li style ="font-weight:400;font-size:18.5px"><strong>sudo apt-get update</strong> (will update the ubuntu Ec2 instance)</li>        
-        <li style ="font-weight:400;font-size:18.5px"><strong>sudo apt install python3-pip</strong> (will download python3)</li>    
-        <li style ="font-weight:400;font-size:18.5px"><strong>sudo pip install apache-airflow</strong> (will download the apache airflow using pip installer)</li>        
-        <li style ="font-weight:400;font-size:18.5px"><strong>sudo pip install pandas</strong> (will download python pandas library)</li>
-        <li style ="font-weight:400;font-size:18.5px"><strong>sudo pip install s3fs</strong> (will download the pyhton s3fs library)</li>
-        <li style ="font-weight:400;font-size:18.5px"><strong>sudo pip install spotipy</strong> (will download the pyhton spotipy library used to access the spotify api)</li>
+        <li style ="font-weight:400;font-size:18.5px"><strong><code>sudo apt-get update</code></strong> (will update the ubuntu Ec2 instance)</li>        
+        <li style ="font-weight:400;font-size:18.5px"><strong><code>sudo apt install python3-pip</code></strong> (will download python3)</li>    
+        <li style ="font-weight:400;font-size:18.5px"><strong><code>sudo pip install apache-airflow</code></strong> (will download the apache airflow using pip installer)</li>        
+        <li style ="font-weight:400;font-size:18.5px"><strong><code>sudo pip install pandas</code></strong> (will download python pandas library)</li>
+        <li style ="font-weight:400;font-size:18.5px"><strong><code>sudo pip install s3fs</code></strong> (will download the pyhton s3fs library)</li>
+        <li style ="font-weight:400;font-size:18.5px"><strong><code>sudo pip install spotipy</code></strong> (will download the pyhton spotipy library used to access the spotify api)</li>
 
 
 
@@ -109,9 +109,9 @@
 ## ⇨ Run following commands in sequence.
 
 
-### 1. cd airflow (you will enter into directory airflow )
+### 1. `cd airflow` (you will enter into directory airflow )
 
-<h3>2. sudo vi airflow.cfg (To edit the airflow.cfg file)</h3>
+<h3>2. <code>sudo vi airflow.cfg</code>(To edit the airflow.cfg file)</h3>
     <ul>
         <li style ="font-weight:400;font-size:18.5px"><strong>in the file change the dags_folder object content from "/home/ubuntu/airflow/dags" to "/home/ubuntu/airflow/spotify_dag"</strong></li>
 
@@ -119,11 +119,11 @@
 ![updated_changing dags in the dag_folder to spotify_dag](https://github.com/DURGESH99P/Spotify-data-engineering-project/assets/94096617/cad5cf56-27ce-417b-b743-9a03ab4ce38b)
 
 
-### 3. sudo mkdir spotify_dag (will create directory named spotify_dag)
+### 3. `sudo mkdir spotify_dag` (will create directory named spotify_dag)
 
-### 4. cd spotify_dag (you will enter into directory spotify_dag)
+### 4. `cd spotify_dag` (you will enter into directory spotify_dag)
 
-### 5. sudo vi spotify_etl.py (write python code to extract & transform data using spotify api & upload the datasets to S3 buckets)
+### 5. `sudo vi spotify_etl.py` (write python code to extract & transform data using spotify api & upload the datasets to S3 buckets)
 
 
 ```python
@@ -198,7 +198,7 @@ def run_spotify_etl():
     song_df.to_csv("s3://spotifydatabucket/song_df.csv")
 ```
 
-### 6. sudo vi spotify_dag.py (write python code to create dag for the spotify etl process)
+### 6. `sudo vi spotify_dag.py` (write python code to create dag for the spotify etl process)
 
 
 ```python
@@ -242,7 +242,7 @@ run_etl
 
 <h2>⏸️ Run the following command to start the Airflow server</h2>
     <ul>
-        <li style ="font-weight:400;font-size:18.5px"><strong>airflow standlone</strong> (will start the Airflow server)</li>
+        <li style ="font-weight:400;font-size:18.5px"><strong><code>airflow standlone</code></strong> (will start the Airflow server)</li>
 
 ### ⇨ After successful run you will see as in the below image 👇
 
@@ -291,4 +291,5 @@ run_etl
 ![you will see the etl run successful,as it has added the data to s3 bucket](https://github.com/DURGESH99P/Spotify-data-engineering-project/assets/94096617/a474fd3c-7dab-47ca-9af5-4b3858b09bed)
 
 
-# 
+### With the help of these csv's you can furhter do data analytics using AWS services such as AWS Quicksight & AWS Athena (quering service).
+### ✒️Note : Please refer to the ipynb notebook included in the repository to view the schema of data provide by SpotifyAPI
