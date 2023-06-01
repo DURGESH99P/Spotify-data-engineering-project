@@ -1,0 +1,26 @@
+
+
+Downloading requirements 👇
+
+sudo apt-get update (will update the ubuntu Ec2 instance)
+sudo apt install python3-pip (will download python3)
+sudo pip install apache-airflow (will download the apache airflow using pip installer)
+sudo pip install pandas (will download python pandas library)
+sudo pip install s3fs (will download the pyhton s3fs library)
+sudo pip install spotipy (will download the pyhton spotipy library used to access the spotify api)
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Making required changes 👇
+
+cd airflow
+sudo vi airflow.cfg ()
+sudo mkdir spotify_dag(in the file change the dags_folder object content from "/home/ubuntu/airflow/dags" to "/home/ubuntu/airflow/spotify_dag")
+cd spotify_dag
+sudo vi spotify_dag.py (copy paste the code from the spotify_dag.py file in local system and save)
+sudo vi spotify_etl.py (copy paste the code from the spotify_etl.py file in local system and save)
+
+airflow standalone (start)
+
+
