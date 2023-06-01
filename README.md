@@ -1,4 +1,4 @@
-<h1 style="text-align:center;font-family:'Times New Roman';color:darkblue;font-weight:700;font-size:40px">Spotify etl pipeline using Airflow and EC2</h1>
+<h1 style="text-align:center;font-family:'Times New Roman';color:darkblue;font-weight:700;font-size:40px">Spotify ETL pipeline on AWS using Airflow</h1>
 
 <hr style="border: 0.001px solid black">
 
