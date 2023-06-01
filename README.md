@@ -1,4 +1,4 @@
-<h1 style="text-align:center;font-family:'Times New Roman';color:darkblue;font-weight:700;font-size:40px">SpotifyAPI ETL data pipeline</h1>
+<h1 style="text-align:center;font-family:'Times New Roman';color:darkblue;font-weight:700;font-size:40px">SpotifyAPI ETL data pipeline using Apache-Airflow and EC2</h1>
 
 <hr style="border: 0.001px solid black">
 
