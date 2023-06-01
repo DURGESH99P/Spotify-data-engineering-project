@@ -2,6 +2,23 @@
 
 <hr style="border: 0.001px solid black">
 
+<body>
+    <h1>Abstract:</h1>
+    <p style ="font-weight:400;font-size:18.5px">This project demonstrates the creation of an ETL pipeline using Apache Airflow and an Ubuntu EC2 instance to extract and transform data from Spotify and upload it to an S3 bucket. Apache Airflow is an open-source platform for developing, scheduling, and monitoring batch-oriented workflows. Its extensible Python framework enables you to build workflows connecting with virtually any technology </p>
+    <h2>Key Features:</h2>
+    <ul>
+        <li style ="font-weight:400;font-size:18.5px"> Setting up an Ubuntu EC2 instance with the necessary security group and IAM role.</li>
+        <li style ="font-weight:400;font-size:18.5px">Installing required software such as Python and Apache Airflow on the EC2 instance.</li>
+        <li style ="font-weight:400;font-size:18.5px">Writing Python code to create a DAG for the Spotify ETL process</li>
+        <li style ="font-weight:400;font-size:18.5px">Extracting and transforming data from Spotify using the Spotipy library.</li>
+        <li style ="font-weight:400;font-size:18.5px">Uploading the transformed data to an S3 bucket.</li>
+    </ul>
+    <p style ="font-weight:400;font-size:18.5px">This pipeline enables efficient and automated data extraction and transformation from Spotify, allowing for easy analysis and insights. The successful implementation of this project showcases the power of using Apache Airflow for ETL processes.</p>
+</body>
+</html>
+
+---
+
 # The Process Architecture  👇
 
 ![Process Architecture](https://github.com/DURGESH99P/Spotify-data-engineering-project/assets/94096617/bc36a15e-e8ca-4fe0-b2f7-41ef1a0ed8e5)
